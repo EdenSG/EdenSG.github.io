@@ -61,6 +61,7 @@
       width:200px;
       height:25px;
       border:2px solid #7af7e2;
+      box-shadow: 0 0 9999px #aaa;
       background-color:#fff
     }
     .pace .pace-progress {
@@ -102,10 +103,19 @@
       display:inline-block
     }
     .pace.pace-inactive {
-      display:none
+      display:none;
+      box-shadow: 0 0 9999px transparent;
     }
   </style>
   <script type="text/javascript" src="https://raw.github.com/HubSpot/pace/v0.4.15/pace.min.js"></script>
+
+
+    <!-- #StopTheSlowLane - http://www.stoptheslowlane.com/ -->
+    <style id="_sl_hide" type="text/css">body { display: none; }</style>
+    <script type="text/javascript">var _sl_options = { animation: 'blur' }; // Alternate Comcast animation</script>
+    <script src="https://fightforthefuture.github.io/stoptheslowlane/widget/slowlane.js"></script>
+
+    
 </head>
 <body>
   <nav class="w-hidden-small w-hidden-tiny nav-bar">
