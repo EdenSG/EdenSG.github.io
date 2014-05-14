@@ -728,3 +728,17 @@ img {
     height: 177px;
   }
 }
+
+
+
+
+
+.QOverlay {
+  background-color: #000000;
+  z-index: 9999;
+}
+
+.QLoader {
+  background-color: #CCCCCC;
+  height: 1px;
+}
