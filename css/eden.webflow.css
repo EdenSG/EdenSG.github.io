@@ -421,8 +421,6 @@ img {
 }
 .container {
   display: block;
-  overflow-x: scroll;
-  overflow-y: scroll;
   padding-right: 3px;
   padding-left: 3px;
 }
