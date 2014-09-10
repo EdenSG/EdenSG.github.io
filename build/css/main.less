@@ -1,0 +1,187 @@
+@import url(http://fonts.googleapis.com/css?family=Comfortaa:700);
+
+/* LESS / Social Media Brand Colors */
+
+@twitter: #00aced;
+@facebook: #3b5998;
+@googleplus: #dd4b39;
+@pinterest: #cb2027;
+@linkedin: #007bb6;
+@youtube: #bb0000;
+@vimeo: #aad450;
+@tumblr: #32506d;
+@instagram: #517fa4;
+@flickr: #ff0084;
+@dribbble: #ea4c89;
+@quora: #a82400;
+@foursquare: #0072b1;
+@forrst: #5B9A68;
+@vk: #45668e;
+@wordpress: #21759b;
+@stumbleupon: #EB4823;
+@yahoo: #7B0099;
+@blogger: #fb8f3d;
+@soundcloud: #ff3a00;
+@blendio: #161617;
+@github: #333;
+ body, html {
+    position: relative;
+    height: 100vh;
+    font-family: 'Comfortaa', Helvatica Neue, sans-serif;
+    background-color: #ffffff;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nMTAwJScgaGVpZ2h0PSczMDAnPgoJPGRlZnM+CgkJPGcgaWQ9J2MnPgoJCQk8ZWxsaXBzZSBjeD0nNTAlJyByeD0nNTAlJyByeT0nMjAwJScgZmlsbC1vcGFjaXR5PScwLjInIGZpbGw9JyNmZmZmZmYnLz4KCQk8L2c+Cgk8L2RlZnM+Cgk8cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWxsPScjMmUyZTJlJy8+Cgk8dXNlIHhsaW5rOmhyZWY9JyNjJyB5PSctMjAwJScvPgoJPHVzZSB4bGluazpocmVmPScjYycgeT0nLTE3NSUnLz4KCTx1c2UgeGxpbms6aHJlZj0nI2MnIHk9Jy0xNTAlJy8+Cgk8dXNlIHhsaW5rOmhyZWY9JyNjJyB5PSctMTI1JScvPgoJPHVzZSB4bGluazpocmVmPScjYycgeT0nLTEwMCUnLz4KCTx1c2UgeGxpbms6aHJlZj0nI2MnIHk9Jy03NSUnLz4KCTx1c2UgeGxpbms6aHJlZj0nI2MnIHk9Jy01MCUnLz4KCTx1c2UgeGxpbms6aHJlZj0nI2MnIHk9Jy0yNSUnLz4KCTx1c2UgeGxpbms6aHJlZj0nI2MnIHk9JzAlJy8+Cgk8dXNlIHhsaW5rOmhyZWY9JyNjJyB5PScyNSUnLz4KCTx1c2UgeGxpbms6aHJlZj0nI2MnIHk9JzUwJScvPgoJPHVzZSB4bGluazpocmVmPScjYycgeT0nNzUlJy8+Cgk8dXNlIHhsaW5rOmhyZWY9JyNjJyB5PScxMDAlJy8+Cgk8dXNlIHhsaW5rOmhyZWY9JyNjJyB5PScxMjUlJy8+Cgk8dXNlIHhsaW5rOmhyZWY9JyNjJyB5PScxNTAlJy8+Cgk8dXNlIHhsaW5rOmhyZWY9JyNjJyB5PScxNzUlJy8+Cgk8dXNlIHhsaW5rOmhyZWY9JyNjJyB5PScyMDAlJy8+Cgk8dXNlIHhsaW5rOmhyZWY9JyNjJyB5PScyMjUlJy8+Cgk8dXNlIHhsaW5rOmhyZWY9JyNjJyB5PScyNTAlJy8+Cgk8dXNlIHhsaW5rOmhyZWY9JyNjJyB5PScyNzUlJy8+Cgk8dXNlIHhsaW5rOmhyZWY9JyNjJyB5PSczMDAlJy8+Cjwvc3ZnPg==');
+    margin: 0;
+    padding: 0;
+    animation: background-move 2s linear infinite;
+    font-size: 18px;
+    font-size: 3vmin;
+    transition: font-size 0s;
+}
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    transform: translate(-50%, -80%);
+    transition: font-size 0s;
+    animation: fade-in-center 1s ease both;
+    p {
+        text-align: center;
+        transition: font-size 0s;
+        cursor: default;
+        margin: 0;
+        a {
+            display: inline-block;
+            padding:6px 0;
+        }
+        &.no-padding {
+            padding: 0;
+            margin: 0;
+        }
+        &.padding-top {
+            padding-top: 5px;
+        }
+        &.padding-bottom {
+            padding-bottom: 5px;
+        }
+    }
+}
+a {
+    color: #26a;
+    text-decoration: none;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    border-left: none;
+    border-right: none;
+    transition: all 0.3s ease, font-size 0s;
+}
+a[href*="twitter.com"] {
+    color: @twitter;
+    cursor: url(twitter.png) 16 16, auto;
+}
+a[href*="plus.google.com"] {
+    color: @googleplus;
+    cursor: url(googleplus.png) 16 16, auto;
+}
+a[href*="github.com"] {
+    color: @github;
+    cursor: url(github.png) 16 16, auto;
+}
+a[href*="soundcloud.com"] {
+    color: @soundcloud;
+    cursor: url(soundcloud.png) 16 16, auto;
+}
+a[href*="blend.io"] {
+    color: @blendio;
+    cursor: url(blendio.png) 13 16, auto;
+}
+a[href*="github.io"] {
+    cursor: url(world.png) 16 16, auto;
+}
+a:focus {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    outline: none;
+}
+a:hover {
+    color: darken(#26a, 15%);
+    border-color: #26a;
+    border-radius: 3px;
+}
+a:active {
+    color: #000;
+    opacity: 0.6;
+    border-color: #000;
+}
+h1 {
+    font-size: 4em;
+    animation: fade-in 1s ease both;
+    transform-origin: 50% 50%;
+    text-align: center;
+    cursor: default;
+    .color-fade {
+        transform-origin: 50% 100%;
+        animation: color-fade 4s 0s ease infinite;
+        color: #26a;
+        display: inline-block;
+        user-select: none;
+
+        &:nth-of-type(2) {
+            animation-delay:0.3s;
+        }
+        &:nth-of-type(3) {
+            animation-delay:0.6s;
+        }
+    }
+}
+@keyframes background-move {
+    0% {
+        background-position-y: 0px;
+    }
+    100% {
+        background-position-y: -75px;
+    }
+}
+@keyframes fade-in-center {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 10%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -60%);
+    }
+}
+@keyframes fade-in {
+    0% {
+        transform: translateY(100px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes color-fade {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    25% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    75% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+::selection {
+    background: rgba(13%, 40%, 67%, 0.3);
+}
