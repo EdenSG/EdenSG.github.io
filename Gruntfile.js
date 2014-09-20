@@ -63,6 +63,13 @@ module.exports = function(grunt) {
                 }
             }
         },
+        uncss: {
+            dist: {
+                files: {
+                    'dist/css/main.css': ['dist/*.html']
+                }
+            }
+        },
         cssmin: {
             dist: {
                 files: {
@@ -77,13 +84,6 @@ module.exports = function(grunt) {
                 src: 'tmp/main.css',
                 dest: 'dist/css/',
             },
-        },
-        uncss: {
-            dist: {
-                files: {
-                    'dist/css/main.css': ['dist/*.html']
-                }
-            }
         },
 
         // Images //
@@ -210,7 +210,7 @@ module.exports = function(grunt) {
     // Tasks
     grunt.registerTask('default', ['js', 'styles', 'images', 'html']);
     grunt.registerTask('js', ['uglify']);
-    grunt.registerTask('styles', ['less', 'cssmin', 'newer:uncss:dist', 'autoprefixer']);
+    grunt.registerTask('styles', ['less', 'uncss', 'cssmin', 'autoprefixer']);
     grunt.registerTask('images', ['newer:copy:main', 'newer:imageoptim:myTask', 'svgmin']);
     grunt.registerTask('html', ['htmlmin']);
     grunt.registerTask('serve', ['browserSync:dev', 'watch']);
