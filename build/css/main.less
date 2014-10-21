@@ -1,5 +1,3 @@
-@import url(//fonts.googleapis.com/css?family=Comfortaa:700);
-
 /* LESS / Social Media Brand Colors */
 
 @twitter: #00aced;
@@ -24,11 +22,12 @@
 @soundcloud: #ff3a00;
 @blendio: #161617;
 @github: #333;
- body, html {
-    position: relative;
-    height: 100vh;
-    font-family: 'Comfortaa', Helvatica Neue, sans-serif;
+@ello: #000;
+body {
+    height: 100%;
+    font-family: 'Anonymous Pro', Helvatica Neue, sans-serif;
     background-color: #ffffff;
+    background-attachment: fixed;
     background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nMTAwJScgaGVpZ2h0PSczMDAnPgoJPGRlZnM+CgkJPGcgaWQ9J2MnPgoJCQk8ZWxsaXBzZSBjeD0nNTAlJyByeD0nNTAlJyByeT0nMjAwJScgZmlsbC1vcGFjaXR5PScwLjInIGZpbGw9JyNmZmZmZmYnLz4KCQk8L2c+Cgk8L2RlZnM+Cgk8cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWxsPScjMmUyZTJlJy8+Cgk8dXNlIHhsaW5rOmhyZWY9JyNjJyB5PSctMjAwJScvPgoJPHVzZSB4bGluazpocmVmPScjYycgeT0nLTE3NSUnLz4KCTx1c2UgeGxpbms6aHJlZj0nI2MnIHk9Jy0xNTAlJy8+Cgk8dXNlIHhsaW5rOmhyZWY9JyNjJyB5PSctMTI1JScvPgoJPHVzZSB4bGluazpocmVmPScjYycgeT0nLTEwMCUnLz4KCTx1c2UgeGxpbms6aHJlZj0nI2MnIHk9Jy03NSUnLz4KCTx1c2UgeGxpbms6aHJlZj0nI2MnIHk9Jy01MCUnLz4KCTx1c2UgeGxpbms6aHJlZj0nI2MnIHk9Jy0yNSUnLz4KCTx1c2UgeGxpbms6aHJlZj0nI2MnIHk9JzAlJy8+Cgk8dXNlIHhsaW5rOmhyZWY9JyNjJyB5PScyNSUnLz4KCTx1c2UgeGxpbms6aHJlZj0nI2MnIHk9JzUwJScvPgoJPHVzZSB4bGluazpocmVmPScjYycgeT0nNzUlJy8+Cgk8dXNlIHhsaW5rOmhyZWY9JyNjJyB5PScxMDAlJy8+Cgk8dXNlIHhsaW5rOmhyZWY9JyNjJyB5PScxMjUlJy8+Cgk8dXNlIHhsaW5rOmhyZWY9JyNjJyB5PScxNTAlJy8+Cgk8dXNlIHhsaW5rOmhyZWY9JyNjJyB5PScxNzUlJy8+Cgk8dXNlIHhsaW5rOmhyZWY9JyNjJyB5PScyMDAlJy8+Cgk8dXNlIHhsaW5rOmhyZWY9JyNjJyB5PScyMjUlJy8+Cgk8dXNlIHhsaW5rOmhyZWY9JyNjJyB5PScyNTAlJy8+Cgk8dXNlIHhsaW5rOmhyZWY9JyNjJyB5PScyNzUlJy8+Cgk8dXNlIHhsaW5rOmhyZWY9JyNjJyB5PSczMDAlJy8+Cjwvc3ZnPg==');
     margin: 0;
     padding: 0;
@@ -38,13 +37,14 @@
     transition: font-size 0s;
 }
 .center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: 0;
-    transform: translate(-50%, -80%);
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    margin: 0 auto;
+    // transform: translate(-50%, -80%);
     transition: font-size 0s;
     animation: fade-in-center 1s ease both;
+    max-width: 80%;
     p {
         text-align: center;
         transition: font-size 0s;
@@ -52,7 +52,7 @@
         margin: 0;
         a {
             display: inline-block;
-            padding:1% 0;
+            padding: 1% 0;
         }
         &.no-padding {
             padding: 0;
@@ -74,29 +74,52 @@ a {
     border-left: none;
     border-right: none;
     transition: all 0.3s ease, font-size 0s;
+    &:after {
+        position: fixed;
+        width: 1em;
+        height: 1em;
+        margin-top:-0.5em;
+        margin-left: 1em;
+        display: none;
+    }
 }
 a[href*="twitter.com"] {
     color: @twitter;
-    cursor: url(twitter.png) 16 16, auto;
+    &:after {
+        content: url(twitter.png);
+    }
+}
+a[href*="ello.co"] {
+    color: @ello;
 }
 a[href*="plus.google.com"] {
     color: @googleplus;
-    cursor: url(googleplus.png) 16 16, auto;
+    &:after {
+        content: url(googleplus.png)
+    }
 }
 a[href*="github.com"] {
     color: @github;
-    cursor: url(github.png) 16 16, auto;
+    &:after {
+        content: url(github.png)
+    }
 }
 a[href*="soundcloud.com"] {
     color: @soundcloud;
-    cursor: url(soundcloud.png) 16 16, auto;
+    &:after {
+        content: url(soundcloud.png)
+    }
 }
 a[href*="blend.io"] {
     color: @blendio;
-    cursor: url(blendio.png) 13 16, auto;
+    &:after {
+        content: url(blendio.png);
+    }
 }
 a[href*="github.io"] {
-    cursor: url(world.png) 16 16, auto;
+    &:after {
+        content: url(world.png);
+    }
 }
 a:focus {
     border-bottom: 2px solid rgba(0, 0, 0, 0.6);
@@ -115,41 +138,42 @@ a:active {
 }
 h1 {
     font-size: 4em;
+    font-family: "Comfortaa", sans-serif;
     animation: sway-in 2500ms 250ms linear both;
     transform-origin: 50% 50%;
     text-align: center;
     cursor: default;
+    padding-bottom: 0.1em;
     .color-fade {
         transform-origin: 50% 100%;
         animation: color-fade 3s 0s ease infinite;
         color: #26a;
         display: inline-block;
         user-select: none;
-
         &:nth-of-type(2) {
-            animation-delay:0.3s;
+            animation-delay: 0.3s;
         }
         &:nth-of-type(3) {
-            animation-delay:0.6s;
+            animation-delay: 0.6s;
         }
     }
 }
 @keyframes background-move {
     0% {
-        background-position-y: 0px;
+        background-position: 0 0;
     }
     100% {
-        background-position-y: -75px;
+        background-position: 0 -75px;
     }
 }
 @keyframes fade-in-center {
     0% {
         opacity: 0;
-        transform: translate(-50%, 10%);
+        transform: translate(0%, 70%);
     }
     100% {
         opacity: 1;
-        transform: translate(-50%, -60%);
+        transform: translate(0%, 0%);
     }
 }
 @keyframes fade-in {
@@ -163,6 +187,7 @@ h1 {
         transform: translateY(0);
     }
 }
+
 @keyframes sway-in { 
   0% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -1000, 0, 0, 1); }
   1.666667% { transform: matrix3d(0.93549, 0.35335, 0, 0, -0.35335, 0.93549, 0, 0, 0, 0, 1, 0, -669.96099, 0, 0, 1); }
@@ -293,4 +318,17 @@ h1 {
 }
 ::selection {
     background: rgba(13%, 40%, 67%, 0.3);
+}
+@media (max-height: 600px), (max-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+    h1 {
+        font-size: 3em;
+    }
+}
+@media (min-height: 500px) {
+    h1 {
+        margin-top: 3%;
+    }
 }

@@ -45,9 +45,13 @@ module.exports = function(grunt) {
 
         // JS //
         uglify: {
-            build: {
-                src: ['build/js/libs/*.js', 'build/js/*.js'],
-                dest: 'dist/js/main.min.js'
+            // build: {
+            //     src: ['build/js/libs/*.js', 'build/js/*.js'],
+            //     dest: 'dist/js/main.min.js'
+            // },
+            filemanager: {
+                src: ['build/js/filemanager.js'],
+                dest: 'dist/images/js/filemanager.js'
             }
         },
 
@@ -75,15 +79,27 @@ module.exports = function(grunt) {
                 files: {
                     'tmp/main.css': ['tmp/*.css']
                 }
+            },
+            filemanager: {
+                files: {
+                    'tmp/filemanager.css': 'build/css/filemanager.css'
+                }
             }
         },
         autoprefixer: {
+            options: {
+                browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1']
+            },
             autoprefix: {
                 expand: true,
                 flatten: true,
                 src: 'tmp/main.css',
                 dest: 'dist/css/',
             },
+            filemanager: {
+                src: 'tmp/filemanager.css',
+                dest: 'dist/css/filemanager.css'
+            }
         },
 
         // Images //
@@ -134,7 +150,7 @@ module.exports = function(grunt) {
                     src: ['*.svg'], // Actual pattern(s) to match.
                     dest: 'dist/images/', // Destination path prefix.
                     ext: '.svg' // Dest filepaths will have this extension.
-                    // ie: optimise img/src/branding/logo.svg and store it in img/branding/logo.min.svg
+                        // ie: optimise img/src/branding/logo.svg and store it in img/branding/logo.min.svg
                 }]
             },
         },
@@ -210,7 +226,7 @@ module.exports = function(grunt) {
     // Tasks
     grunt.registerTask('default', ['js', 'styles', 'images', 'html']);
     grunt.registerTask('js', ['uglify']);
-    grunt.registerTask('styles', ['less', 'uncss', 'cssmin', 'autoprefixer']);
+    grunt.registerTask('styles', ['less', 'cssmin', 'autoprefixer']);
     grunt.registerTask('images', ['newer:copy:main', 'newer:imageoptim:myTask', 'svgmin']);
     grunt.registerTask('html', ['htmlmin']);
     grunt.registerTask('serve', ['browserSync:dev', 'watch']);
